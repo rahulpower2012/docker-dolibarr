@@ -57,6 +57,7 @@ RUN apt-get update -y \
         libpq-dev \
         libxml2-dev \
         libzip-dev \
+        mysql-server \
         default-mysql-client \
         postgresql-client \
         cron \
