@@ -116,6 +116,7 @@ function waitForDataBase()
     mysql -u ${DOLI_DB_USER} --protocol tcp -p${DOLI_DB_PASSWORD} -h ${DOLI_DB_HOST} -P ${DOLI_DB_HOST_PORT} --connect-timeout=5 -e "status" > /dev/null 2>&1
     r=$?
     if [[ ${r} -ne 0 ]]; then
+      echo "user: ${DOLI_DB_USER} pass: ${DOLI_DB_PASSWORD}"
       echo "Waiting that SQL database is up ..."
       sleep 2
     fi
